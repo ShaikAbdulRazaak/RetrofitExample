@@ -22,19 +22,19 @@ public class Post {
         this.thumbnailUrl = thumbnailUrl;
     }
 
-    public int getAlbumId() {
+    int getAlbumId() {
         return albumId;
     }
 
-    public int getId() {
+    int getId() {
         return id;
     }
 
-    public String getTitle() {
+    String getTitle() {
         return title;
     }
 
-    public String getUrl() {
+    String getUrl() {
         return url;
     }
 

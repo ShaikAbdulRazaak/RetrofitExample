@@ -1,7 +1,6 @@
 package com.example.retrofitexample;
 
 import android.content.Context;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,10 +15,10 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.holder> {
-    Context context;
-    List<Post> posts;
+    private Context context;
+    private List<Post> posts;
 
-    public recyclerAdapter(List<Post> posts, Context context) {
+    recyclerAdapter(List<Post> posts, Context context) {
         this.context = context;
         this.posts = posts;
     }

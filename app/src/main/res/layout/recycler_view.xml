@@ -27,7 +27,7 @@
             android:layout_margin="15dp"
             android:id="@+id/imagePhotos"
             android:scaleType="fitXY"
-            />
+            android:contentDescription="@string/app_name" />
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
