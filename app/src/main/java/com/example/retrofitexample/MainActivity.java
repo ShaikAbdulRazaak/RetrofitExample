@@ -17,8 +17,6 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
-    List<Post> posts;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,22 +28,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
                 if (!response.isSuccessful()) {
-                    //textView.setText(response.code());
                     Log.d("data", "" + response.body());
                 }
                 generateList(response.body());
-                // textView.append(item);
-               /* List<Post> posts = response.body();
-                for (Post post : posts) {
-                    String item = "";
-                    item += post.getId() + "\n";
-                    item += post.getUrl() + "\n";
-                    item += post.getTitle() + "\n";
-                    item += post.getThumbnailUrl() + "\n";
-                }*/
-
             }
-
             @Override
             public void onFailure(Call<List<Post>> call, Throwable t) {
                 Toast.makeText(MainActivity.this, "Nhi Hua !!", Toast.LENGTH_SHORT)
@@ -53,10 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("Fail", "onFailure: " + t.getMessage());
             }
         });
-
-
     }
-
     public void generateList(List<Post> posts) {
         LinearLayoutManager linearLayoutManager = new
                 LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
