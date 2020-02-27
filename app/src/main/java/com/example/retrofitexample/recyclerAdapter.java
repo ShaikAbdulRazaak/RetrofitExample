@@ -48,9 +48,10 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.holder
         }
         holder.imageViewPhotos.setImageBitmap(bitmap);*/
 
-        Picasso.get().load(post.getUrl()).into(holder.imageViewPhotos);
+       Picasso.get().load(post.getUrl()).into(holder.imageViewPhotos);
         String text = post.getId() + "\n" + post.getAlbumId()+"\n" + post.getTitle() ;
         holder.textViewPhotos.setText(text);
+
 
     }
 
@@ -59,7 +60,7 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.holder
         return posts.size();
     }
 
-    class holder extends RecyclerView.ViewHolder {
+    static class holder extends RecyclerView.ViewHolder {
         ImageView imageViewPhotos;
         TextView textViewPhotos;
 
